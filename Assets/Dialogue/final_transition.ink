@@ -1,3 +1,4 @@
+-> transition
 === transition ===
 As the floors tick away, you find yourself thinking back to those most recent memories again. 
 
@@ -10,6 +11,5 @@ You’d been interested to learn why Exodus could predict the future so well. Wa
 The elevator began to slow, bringing you out of your thoughts. You braced yourself for whatever you might find. 
 
 “I’m here for answers”
-
-
 + ..the doors open...-> END
+
