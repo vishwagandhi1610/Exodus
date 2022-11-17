@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 // This script is a basic 2D character controller that allows
@@ -67,8 +68,19 @@ public class CharacterController2D : MonoBehaviour
 
     private void HandleHorizontalMovement()
     {
-        Vector2 moveDirection = InputManager.GetInstance().GetMoveDirection();
-        rb.velocity = new Vector2(moveDirection.x * runSpeed, rb.velocity.y);
+        float horizontalInput = Input.GetAxis("Horizontal");
+        rb.velocity = new Vector2(horizontalInput * runSpeed, rb.velocity.y);
+
+
+        // Flip the direction when moving right and left
+        if (horizontalInput > 0.1f)
+        {
+            transform.localScale = new Vector3(Math.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+        }
+        else if (horizontalInput < -0.1f)
+        {
+            transform.localScale = new Vector3(-1 * Math.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+        }
     }
 
     private void HandleJumping()
