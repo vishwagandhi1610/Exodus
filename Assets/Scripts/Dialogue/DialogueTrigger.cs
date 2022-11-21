@@ -12,22 +12,33 @@ public class DialogueTrigger : MonoBehaviour
 
     private bool playerInRange;
 
+
+    // The list of dialogue triggers that will be enabled by
+    // the Dialogue Manager after this dialogue trigger completes
+    [Header("Trigger UI")]
+    public GameObject[] nextTriggers;
+
     private void Awake()
     {
         playerInRange = false;
         visualCue.SetActive(false);
+        foreach (GameObject trigger in nextTriggers)
+        {
+            trigger.SetActive(false);
+        }
     }
 
     private void Update()
     {
-        if(playerInRange && !DialogueManager.GetInstance().dialogueIsPlaying)
+        if (playerInRange && !DialogueManager.GetInstance().dialogueIsPlaying)
         {
             visualCue.SetActive(true);
             if (InputManager.GetInstance().GetInteractPressed())
             {
-                DialogueManager.GetInstance().EnterDialogueMode(inkJSON);
+                DialogueManager.GetInstance().EnterDialogueMode(inkJSON, nextTriggers);
             }
-        } else
+        }
+        else
         {
             visualCue.SetActive(false);
         }
@@ -37,7 +48,7 @@ public class DialogueTrigger : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            playerInRange=true;
+            playerInRange = true;
         }
     }
 

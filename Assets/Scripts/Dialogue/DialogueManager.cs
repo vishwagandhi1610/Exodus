@@ -22,6 +22,12 @@ public class DialogueManager : MonoBehaviour
 
     private static DialogueManager instance;
 
+    private const string SELECTION_TAG = "selection";
+
+    // The list of dialogue triggers that will be enabled by
+    // after the current dialogue completes
+    private GameObject[] nextTriggers;
+
     private void Awake()
     {
         if(instance == null)
@@ -65,11 +71,12 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
-    public void EnterDialogueMode(TextAsset inkJSON)
+    public void EnterDialogueMode(TextAsset inkJSON, GameObject[] Triggers)
     {
         currentStory = new Story(inkJSON.text);
         dialogueIsPlaying = true;
         dialoguePanel.SetActive(true);
+        nextTriggers = Triggers;
 
         ContinueStory();
     }
@@ -91,10 +98,44 @@ public class DialogueManager : MonoBehaviour
             dialogueText.text = currentStory.Continue();
             // Display choices if any
             DisplayChoices();
+            // handle tags
+            HandleTags(currentStory.currentTags);
         }
         else
         {
             StartCoroutine(ExitDialogueMode());
+        }
+    }
+
+    private void HandleTags(List<string> currentTags)
+    {
+        // loop through each tag and handle accordingly
+        foreach(string tag in currentTags)
+        {
+            // parse the tag
+            string[] splitTag = tag.Split(':');
+            if (splitTag.Length != 2)
+            {
+                Debug.LogError("Tag could not be appropriately parsed: " + tag);
+            }
+            string tagKey = splitTag[0].Trim();
+            string tagValue = splitTag[1].Trim();
+
+            // handle the tag
+            switch (tagKey)
+            {
+                case SELECTION_TAG:
+                    Debug.Log("selection=" + tagValue);
+                    int selectionIndex = int.Parse(tagValue);
+                    if (selectionIndex >= 0)
+                    {
+                        nextTriggers[selectionIndex].SetActive(true); 
+                    }
+                    break;
+                default:
+                    Debug.LogWarning("Tag came in but is not currently being handled: " + tag);
+                    break;
+            }
         }
     }
 
