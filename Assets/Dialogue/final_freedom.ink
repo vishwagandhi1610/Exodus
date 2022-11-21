@@ -1,5 +1,5 @@
 === freedom ===
-You hear the room around you groan and creak to life as a bolt of cold steam shoots out from under the wall. You watch in shock as the wall to your left rises from the floor. The code worked! But who would want you to know these numbers? 
+You hear the room around you groan and creak to life as a bolt of cold steam shoots out from under the wall. You watch in shock as the wall in front of you rises from the floor. The code worked! But who would want you to know these numbers? 
 
 Tentatively, you step out of your room and onto a metal grated walkway. This walkway appears to be a floor level of sorts, surrounded by a number of other small garage-like enclosures. Grabbing the steel railing, you look outward to find that your floor is one of many…perhaps of hundreds…of floors with cell after cell. In the dim light and cold air the feeling is almost liminal. Transitory. Unwelcoming. 
 
