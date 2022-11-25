@@ -5,13 +5,16 @@ using UnityEngine;
 public class DialogueTrigger : MonoBehaviour
 {
     [Header("Visual Cue")]
-    [SerializeField] private GameObject visualCue;
+    [SerializeField] 
+    private GameObject visualCue;
 
     [Header("Ink JSON")]
-    [SerializeField] private TextAsset inkJSON;
+    [SerializeField] 
+    private TextAsset inkJSON;
 
     private bool playerInRange;
 
+    public bool triggerOnOrOff;
 
     // The list of dialogue triggers that will be enabled by
     // the Dialogue Manager after this dialogue trigger completes
@@ -24,7 +27,7 @@ public class DialogueTrigger : MonoBehaviour
         visualCue.SetActive(false);
         foreach (GameObject trigger in nextTriggers)
         {
-            trigger.SetActive(false);
+            trigger.SetActive(triggerOnOrOff);
         }
     }
 
@@ -35,7 +38,7 @@ public class DialogueTrigger : MonoBehaviour
             visualCue.SetActive(true);
             if (InputManager.GetInstance().GetInteractPressed())
             {
-                DialogueManager.GetInstance().EnterDialogueMode(inkJSON, nextTriggers);
+                DialogueManager.GetInstance().EnterDialogueMode(inkJSON, nextTriggers, triggerOnOrOff);
             }
         }
         else

@@ -28,6 +28,9 @@ public class DialogueManager : MonoBehaviour
     // after the current dialogue completes
     private GameObject[] nextTriggers;
 
+    // Whether the current dialogue trigger will enable or disable the object that comes after it
+    private bool triggerOnOrOff;
+
     private void Awake()
     {
         if(instance == null)
@@ -71,12 +74,13 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
-    public void EnterDialogueMode(TextAsset inkJSON, GameObject[] Triggers)
+    public void EnterDialogueMode(TextAsset inkJSON, GameObject[] Triggers, bool onOrOff)
     {
         currentStory = new Story(inkJSON.text);
         dialogueIsPlaying = true;
         dialoguePanel.SetActive(true);
         nextTriggers = Triggers;
+        triggerOnOrOff = !onOrOff;
 
         ContinueStory();
     }
@@ -129,7 +133,7 @@ public class DialogueManager : MonoBehaviour
                     int selectionIndex = int.Parse(tagValue);
                     if (selectionIndex >= 0)
                     {
-                        nextTriggers[selectionIndex].SetActive(true); 
+                        nextTriggers[selectionIndex].SetActive(triggerOnOrOff); 
                     }
                     break;
                 default:

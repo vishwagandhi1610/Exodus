@@ -19,12 +19,14 @@ public class OneShotDialogueTrigger : MonoBehaviour
     [Header("Trigger UI")]
     public GameObject[] nextTriggers;
 
+    public bool triggerOnOrOff;
+
     private void Awake()
     {
         playerInRange = false;
         foreach (GameObject trigger in nextTriggers)
         {
-            trigger.SetActive(false);
+            trigger.SetActive(triggerOnOrOff);
         }
     }
 
@@ -32,7 +34,7 @@ public class OneShotDialogueTrigger : MonoBehaviour
     {
         if (playerInRange && active && !DialogueManager.GetInstance().dialogueIsPlaying)
         {
-            DialogueManager.GetInstance().EnterDialogueMode(inkJSON, nextTriggers);
+            DialogueManager.GetInstance().EnterDialogueMode(inkJSON, nextTriggers, triggerOnOrOff);
             active = false;
         }
     }
