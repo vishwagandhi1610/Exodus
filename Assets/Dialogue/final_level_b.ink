@@ -1,11 +1,11 @@
-=== level_B ===
+#selection:-1
 'B for basement' you think. Makes sense.
 
-+ ...you step out of elevator...-> B1
++ ...you step out of elevator...-> B1 #selection:-1
 
 === B1 ===
 The basement around you is cold and dank; dark and grungy. A frayed cable nearby spits a shower of glowing yellow sparks to the ground, which fizzle out in a puddle of coolant. What happened here?
-+ …”Only moving forward will give me answers”…-> B2
++ …”Only moving forward will give me answers”…-> B2 #selection:-1
 
 === B2 ===
 you think aloud. Crossing the floor, you find your shoes catching on a number of papers strewn about the area. You pick one up:
@@ -18,5 +18,5 @@ An Architecture for Social NPCs in Commercial Games, Arnav Jhala 2022 reads anot
 
 Suddenly, a faint light catches the corner of your eye. You turn to see a glass room in the corner of the basement. Its electric lights hum, drawing you in like a moth to a streetlamp. 
 
-+ …maybe it has some more answers…-> END
-+ …I think it’s best to leave a room like that on its own…-> END
++ …maybe it has some more answers…-> END #selection:0
++ …I think it’s best to leave a room like that on its own…-> END #selection:1

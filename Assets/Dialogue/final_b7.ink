@@ -1,11 +1,11 @@
-=== B7 ===
+#selection:-1
 You keep moving along the basement until you find a staircase descending even deeper into the ground. You hesitate for a second before following its maddening spiral downward.Perhaps it's just your nerves, but electricity seems to pulse from the damp ground itself.
-+ ...No turning back now...-> B8
++ ...No turning back now...-> B8 #selection:-1
 
 === B8 ===
 The basement leads you to another room, and this one is unlocked. The room appears to be an old sound stage. It’s deathly quiet, aside from the static buzzing from a wall of television sets piled high. A control panel sits patiently at the center of the floor. You walk towards it.
 
-+ …Tentatively, you hit a few buttons…-> Ending_B
++ …Tentatively, you hit a few buttons…-> Ending_B #selection:-1
 
 === Ending_B ===
 The command panel whirrs to life, as do the televisions. A video begins to play. 
@@ -46,5 +46,5 @@ Suddenly, a bolt of blue lightning jumps up from a corner of the room.
 
 Panic rises in your chest as you try to decide what to do next. You need to move fast. 
 
-+ ...investigate more...-> END
-+ ...go back to the cells you woke up in... -> END
++ ...investigate more...-> END #selection:0
++ ...go back to the cells you woke up in... -> END #selection:1
