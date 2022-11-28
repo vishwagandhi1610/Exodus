@@ -1,4 +1,4 @@
-=== R6 ===
+#selection:-1
 You have no choice left but to peer in to the bright blue light shining from the portal in front of you. Like peering through water, it ripples and flows before it focuses on four faces staring back at you.
 
 “So you’re telling me it’s still running then?” One voice asks another.
@@ -17,4 +17,4 @@ The arch g0es black, as does the edges of your world ar0und you. You try t0 brea
 
 0n1y 01101110 01101111 01110100 01101000 01101001 01101110 01100111.
 
-+ 01101111 01101110 01101100 01111001 00100000 01101110 01101111 01110100 01101000 01101001 01101110 01100111 -> END
++ 01101111 01101110 01101100 01111001 00100000 01101110 01101111 01110100 01101000 01101001 01101110 01100111 -> END #selection:0

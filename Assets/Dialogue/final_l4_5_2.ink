@@ -1,3 +1,3 @@
-=== L4_5_2 ===
+#selection:-1
 You use the brick to smash in the driver’s seat window. Grabbing the keys from the dash, you’re successfully able to get the engine running. You sit down and to your surprise find another pair of SimuLoads lying in your seat. You toss them to the side and put the car in reverse. Time to drive to some answers. As the car sputters to life, you realize a song is still playing from an old MP3 player. What, was this driver a grandpa or something? A cane in the back seat confirms your suspicions as you laugh at the song choice. 
-+ ...life is a highway, i'm gonna ride it...-> END
++ ...life is a highway, i'm gonna ride it...-> END #selection:0

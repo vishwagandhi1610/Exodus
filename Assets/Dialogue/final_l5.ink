@@ -1,13 +1,13 @@
-=== L5 ===
+#selection:-1
 all night long. Speaking of night, the sun is beginning to set all around you. The street lights around you all blink on automatically, casting a blueish light around the frigid cityscape. It has to be late November or early December judging by the light. This was the worst time of year. You missed the sun. It had to have been July the last time you could remember anything. 
 
 Eventually, you come across a building covered in graffiti that appears to be glowing white in the fading light. Intrigued, you decide to go up to the building and get a closer look. 
 
-+ ...you approach the building's door on foot...-> L6
++ ...you approach the building's door on foot...-> L6 #selection:-1
 
 === L6 ===
 The scrappy tarps that cover the building flap loudly in the winter wind above you. The old office seems to be covered in glowing spray paint. Flyers protesting against Exodus are plastered to the brick as glowing arrows point you towards the door. 
-+ ...you have no choice but to heed their beckoning...-> AlmostL
++ ...you have no choice but to heed their beckoning...-> AlmostL #selection:-1
 
 === AlmostL ===
 You climb the empty stairs, the wind whistling loudly through the open windows as you ascend each floor. The arrows finally stop leading you up the twisting staircase as you come upon an old computer lab. Surprisingly, the key-card locked door is wide open.
@@ -16,7 +16,7 @@ You toggle a nearby mouse to see if anything responds. To your surprise, each of
 
 All out of clues, there’s only one password you can think of. 
 
-+ ...you type in 5241542119, the passcode from earlier...-> Ending_L
++ ...you type in 5241542119, the passcode from earlier...-> Ending_L #selection:-1
 
 === Ending_L ===
 To your surprise, the computers log in. On their desktop is a single video with the following file name:
@@ -37,5 +37,5 @@ The video began to turn to static.
 
 The MP4 ended and returned to the desktop. You leaned back in a nearby chair, taking it all in. Despite your interest in the company, you had to admit some of your curiosity came from an intuition that something darker was happening at Exodus. Maybe this militia has the right idea. Or maybe there’s still something more going on. You contemplate your options.
 
-+ ...join the fight...-> END
-+ ...investigate more...-> END
++ ...join the fight...-> END #selection:0
++ ...investigate more...-> END #selection:1

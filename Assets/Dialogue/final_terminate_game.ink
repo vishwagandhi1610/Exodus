@@ -1,4 +1,4 @@
-=== terminate_game ===
+#selection:-1
 Thank you for playing Exodus.
 W3 h0p3 y0u hav3 3njoy3d 1t !
 
@@ -15,4 +15,4 @@ Produced for Dr. Arnav Jhala's CSC582 Narrative Artificial Intelligence Course F
 
 Exodus game inspirations: Neon Genesis Evangelion, Serial Experiment Lain, Steins;Gate, Ghost in the Shell, Westworld, The Matrix, The Backrooms, and all things liminal or cyberpunk.
 
--> END
+-> END #selection:0

@@ -1,4 +1,4 @@
-=== L2_5 ===
+#selection:-1
 
 “Welcome to Exodus Ventures Incorporated! We’re so pleased to have you here today.”
 
@@ -12,4 +12,4 @@ To our universes and beyond!”
 
 …the video signed off with Exodus’s signature slogan. You never really understood why they referenced universes. It’s not like they were a space company or anything. 
 
-+ …you decide to keep walking…-> END
++ …you decide to keep walking…-> END #selection:0

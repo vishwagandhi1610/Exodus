@@ -1,5 +1,5 @@
 -> transition
-=== transition ===
+#selection:-1
 As the floors tick away, you find yourself thinking back to those most recent memories again. 
 
 What drew you to work for Exodus was that they weren’t just your average tech company. The corporation specialized in narrative artificial intelligence, and worked to simulate any kind of plot line that one could possibly conceive of.  
@@ -11,5 +11,5 @@ You’d been interested to learn why Exodus could predict the future so well. Wa
 The elevator began to slow, bringing you out of your thoughts. You braced yourself for whatever you might find. 
 
 “I’m here for answers”
-+ ..the doors open...-> END
++ ..the doors open...-> END #selection:0
 

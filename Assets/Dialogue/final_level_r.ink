@@ -1,7 +1,7 @@
-=== level_R ===
+#selection:-1
 "R for roof top" you think. Makes sense.
 
-+ ...you step out of elevator...-> R1
++ ...you step out of elevator...-> R1 #selection:-1
 
 === R1 ===
 Before you stands a glorious rooftop laboratory…or at least, the remains of it.
@@ -10,6 +10,6 @@ A dark aura shrouds the laboratory as a cold winter wind howls through shattered
 
 This is no ordinary floor. And you fear it might be your last one. 
  
-+ I'm not prepared for this scene yet. I need to know more before I come back. -> END
-+ ...I'm ready for the answers I've been searching for...-> END
++ I'm not prepared for this scene yet. I need to know more before I come back. -> END #selection:0
++ ...I'm ready for the answers I've been searching for...-> END #selection:1
 

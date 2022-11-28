@@ -1,4 +1,4 @@
-=== L4 ===
+#selection:-1
 You have to keep going. You’ve got to get to the bottom of this. 
 
 Braving the wind and the setting sun, you decide to take to the streets. Maybe someone there can help you figure out where everyone is.
@@ -11,5 +11,5 @@ To your left, you see a car that appears to have crashed into a stop sign. Its h
 
 To your right, you find another car parallel parked on the road. Rushing closer, you see a key sitting in the dashboard. Maybe this one has some gas. 
 
-+ ...you pick up a brick laying just beside your feet...-> END
-+ ...might as just well walk...-> END
++ ...you pick up a brick laying just beside your feet...-> END #selection:0
++ ...might as just well walk...-> END #selection:1
