@@ -19,6 +19,7 @@ public class CharacterController2D : MonoBehaviour
     // components attached to player
     private BoxCollider2D coll;
     private Rigidbody2D rb;
+    private bool grounded;
 
     // other
     private bool isGrounded = false;
@@ -37,11 +38,16 @@ public class CharacterController2D : MonoBehaviour
         {
             return;
         }
-        UpdateIsGrounded();
+        //UpdateIsGrounded();
 
         HandleHorizontalMovement();
 
-        HandleJumping();
+        //HandleJumping();
+
+        if (Input.GetKey(KeyCode.Space) && grounded)
+        {
+            Jump();
+        }
     }
 
     private void UpdateIsGrounded()
@@ -91,6 +97,19 @@ public class CharacterController2D : MonoBehaviour
             isGrounded = false;
             rb.velocity = new Vector2(rb.velocity.x, jumpSpeed);
         }
+    }
+
+    private void Jump()
+    {
+        rb.velocity = new Vector2(rb.velocity.x, jumpSpeed);
+        //anim.SetTrigger("jump");
+        grounded = false;
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Ground")
+            grounded = true;
     }
 
 }
