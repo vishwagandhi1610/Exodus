@@ -1,4 +1,4 @@
-﻿
+
 That’s weird. Why would you of all people have access to a room you’d never seen before? You were just an entry-level hire!
 
 Nonmatter the answer, curiosity has gotten the best of you, and you step inside. 
