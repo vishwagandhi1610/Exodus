@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class CarDoor : MonoBehaviour
 {
+
+    public Car carControl;
+
     [Header("Visual Cue")]
     [SerializeField]
     private GameObject visualCue;
@@ -12,12 +15,12 @@ public class CarDoor : MonoBehaviour
 
     private void Update()
     {
-        if (playerInRange && !DialogueManager.GetInstance().dialogueIsPlaying)
+        if (playerInRange)
         {
             visualCue.SetActive(true);
             if (InputManager.GetInstance().GetInteractPressed())
             {
-
+                carControl.EnterExit();
             }
         }
         else
