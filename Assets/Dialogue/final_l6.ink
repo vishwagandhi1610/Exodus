@@ -1,4 +1,4 @@
-﻿#selection:-1
+#selection:-1
 You climb the empty stairs, the wind whistling loudly through the open windows as you ascend each floor. The arrows finally stop leading you up the twisting staircase as you come upon an old computer lab. Surprisingly, the key-card locked door is wide open.
 
 You toggle a nearby mouse to see if anything responds. To your surprise, each of the computers fizz to life, prompting you with a password. 
