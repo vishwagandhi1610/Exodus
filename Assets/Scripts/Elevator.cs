@@ -10,6 +10,7 @@ public class Elevator : MonoBehaviour
     public Transform roof;
     public Transform lobby;
     public Transform basement;
+    public Transform cell;
 
     public float speed;
     bool level = true;
@@ -49,12 +50,6 @@ public class Elevator : MonoBehaviour
                 level = false;
                 player.transform.parent = this.transform;
 
-            }
-
-            if (true)
-            {
-                Debug.Log(floor);
-                Debug.Log(level);
             }
 
         }
@@ -98,6 +93,26 @@ public class Elevator : MonoBehaviour
 
         }
 
+        if (Vector2.Distance(player.position, elevatorswitch.position) < 0.5f && Input.GetKeyDown(KeyCode.C))
+        {
+            floor = 4;
+
+            //diff = player.position - elevatorswitch.position;
+
+            if (transform.position.y == cell.position.y)
+            {
+                level = true;
+
+            }
+            else if (transform.position.y > cell.position.y || transform.position.y < cell.position.y)
+            {
+                level = false;
+                player.transform.parent = this.transform;
+            }
+
+
+        }
+
         if (!level && floor == 1)
         {
             transform.position = Vector2.MoveTowards(transform.position, basement.position, speed * Time.deltaTime);
@@ -132,7 +147,17 @@ public class Elevator : MonoBehaviour
             }
         }
 
-        
+        if (!level && floor == 4)
+        {
+            transform.position = Vector2.MoveTowards(transform.position, cell.position, speed * Time.deltaTime);
+            //Vector2 s = diff + elevatorswitch.position;
+            //player.position = Vector2.MoveTowards(player.position, s, speed * Time.deltaTime);
+            if (Vector2.Distance(transform.position, cell.position) < 0.01f)
+            {
+                player.transform.parent = null;
+            }
+        }
+
 
 
     }
