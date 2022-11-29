@@ -24,6 +24,10 @@ public class DialogueManager : MonoBehaviour
 
     private const string SELECTION_TAG = "selection";
 
+    [SerializeField] private GameObject player;
+
+    private Animator anim;
+
     // The list of dialogue triggers that will be enabled by
     // after the current dialogue completes
     private GameObject[] nextTriggers;
@@ -38,6 +42,7 @@ public class DialogueManager : MonoBehaviour
             Debug.LogWarning("More than one Dialogue Manager");
         }
         instance = this;
+        anim = player.GetComponent<Animator>();
     }
 
     public static DialogueManager GetInstance()
@@ -76,6 +81,7 @@ public class DialogueManager : MonoBehaviour
 
     public void EnterDialogueMode(TextAsset inkJSON, GameObject[] Triggers, bool onOrOff)
     {
+        anim.SetBool("walk", false);
         currentStory = new Story(inkJSON.text);
         dialogueIsPlaying = true;
         dialoguePanel.SetActive(true);
