@@ -20,6 +20,7 @@ public class CharacterController2D : MonoBehaviour
     private BoxCollider2D coll;
     private Rigidbody2D rb;
     private bool grounded;
+    private Animator anim;
 
     // other
     private bool isGrounded = false;
@@ -30,6 +31,7 @@ public class CharacterController2D : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
 
         rb.gravityScale = gravityScale;
+        anim = GetComponent<Animator>();
     }
 
     private void FixedUpdate()
@@ -48,6 +50,7 @@ public class CharacterController2D : MonoBehaviour
         {
             Jump();
         }
+
     }
 
     private void UpdateIsGrounded()
@@ -87,6 +90,9 @@ public class CharacterController2D : MonoBehaviour
         {
             transform.localScale = new Vector3(-1 * Math.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
         }
+
+        anim.SetBool("walk", horizontalInput != 0);
+        anim.SetBool("grounded", grounded);
     }
 
     private void HandleJumping()
@@ -102,7 +108,7 @@ public class CharacterController2D : MonoBehaviour
     private void Jump()
     {
         rb.velocity = new Vector2(rb.velocity.x, jumpSpeed);
-        //anim.SetTrigger("jump");
+        anim.SetTrigger("jump");
         grounded = false;
     }
 
