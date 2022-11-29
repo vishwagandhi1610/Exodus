@@ -33,7 +33,7 @@ public class Elevator : MonoBehaviour
 
     void StartElevator()
     {
-        if (Vector2.Distance(player.position, elevatorswitch.position) < 0.5f && Input.GetKeyDown(KeyCode.Alpha3))
+        if (Vector2.Distance(player.position, elevatorswitch.position) < 0.5f && Input.GetKeyDown(KeyCode.R))
         {
             floor = 3;
 
@@ -59,7 +59,7 @@ public class Elevator : MonoBehaviour
 
         }
 
-        if (Vector2.Distance(player.position, elevatorswitch.position) < 0.5f && Input.GetKeyDown(KeyCode.Alpha2))
+        if (Vector2.Distance(player.position, elevatorswitch.position) < 0.5f && Input.GetKeyDown(KeyCode.L))
         {
             floor = 2;
 
@@ -78,7 +78,7 @@ public class Elevator : MonoBehaviour
 
         }
 
-        if (Vector2.Distance(player.position, elevatorswitch.position) < 0.5f && Input.GetKeyDown(KeyCode.Alpha1))
+        if (Vector2.Distance(player.position, elevatorswitch.position) < 0.5f && Input.GetKeyDown(KeyCode.B))
         {
             floor = 1;
 
