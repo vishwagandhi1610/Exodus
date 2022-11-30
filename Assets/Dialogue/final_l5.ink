@@ -1,5 +1,5 @@
 #selection:-1
-all night long. Speaking of night, the sun is beginning to set all around you. The street lights around you all blink on automatically, casting a blueish light around the frigid cityscape. It has to be late November or early December judging by the light. This was the worst time of year. You missed the sun. It had to have been July the last time you could remember anything. 
+You Drive all night long. Speaking of night, the sun is beginning to set all around you. The street lights around you all blink on automatically, casting a blueish light around the frigid cityscape. It has to be late November or early December judging by the light. This was the worst time of year. You missed the sun. It had to have been July the last time you could remember anything. 
 
 Eventually, you come across a building covered in graffiti that appears to be glowing white in the fading light. Intrigued, you decide to go up to the building and get a closer look. 
 
