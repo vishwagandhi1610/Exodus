@@ -4,16 +4,10 @@ using UnityEngine;
 
 public class enableOnAwake : MonoBehaviour
 {
+    // Enable this object once this script turns on
     public GameObject enableObject;
-    // Start is called before the first frame update
     void Start()
     {
         enableObject.SetActive(true);   
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

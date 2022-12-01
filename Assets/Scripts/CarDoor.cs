@@ -20,7 +20,7 @@ public class CarDoor : MonoBehaviour
             visualCue.SetActive(true);
             if (InputManager.GetInstance().GetInteractPressed())
             {
-                carControl.EnterExit();
+                carControl.EnterExit(); // Enter the car if the player interacts while near it
             }
         }
         else
