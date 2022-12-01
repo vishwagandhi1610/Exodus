@@ -1,2 +1,2 @@
 # Exodus
-Open in Unity Engine
+Open in Unity Editor and make the build
